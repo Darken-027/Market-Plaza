@@ -1,10 +1,7 @@
 package com.market_plaza.persistence.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -33,6 +30,9 @@ public class Producto {
     private Integer cantidadStock;
 
     private Boolean estado;
+
+    @ManyToMany
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
 
     public Boolean getEstado() {
         return estado;
