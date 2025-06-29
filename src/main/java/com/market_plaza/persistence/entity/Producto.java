@@ -32,9 +32,12 @@ public class Producto {
     @Column(name = "cantidad_stock")
     private Integer cantidadStock;
 
+    private Boolean estado;
+
     public Boolean getEstado() {
         return estado;
     }
+
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
@@ -88,5 +91,5 @@ public class Producto {
         Integer = integer;
     }
 
-    private Boolean estado;
+
 }
